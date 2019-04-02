@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Toggle Password</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="password">
+    <input type="password" class="input">
+    <i class="fas fa-eye"></i>
+  </div>
+</div>
+	
+<script>
+var icon = document.querySelector(".fas");
+var input = document.querySelector(".input");
+
+icon.addEventListener("click", function(){
+  this.classList.toggle("active");
+  
+  if(input.type == "password"){
+    input.type = "text";
+  }
+  else{
+    input.type = "password";
+  }
+  
+});
+</script>
+
+</body>
+</html>
